@@ -6,7 +6,6 @@
     <input type="radio" name="gender" value="male">男性
     <input type="radio" name="gender" value="female">女性<br>
     
-
     <label for="birthday">生年月日:
       <input
         type="date"
