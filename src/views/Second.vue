@@ -22,7 +22,7 @@
           <label for="d">いいえ</label>
         </form>
 
-      <form class="question-box" v-if="show">
+      <form class="question-box" v-if="show2">
         <p>過去５年以内に、病気やけがで、手術をうけたことまたは、継続して７日以上の入院をしたことがありますか？</p>
         <input type="radio" name="question" value="ok" id="e" />
         <label for="e">はい</label>
@@ -32,8 +32,8 @@
     </div>
 
     <div class="page-transition-button">
-      <button id="back-btn" class="back-btn">前へ戻る</button>
-      <button id="next-btn" class="next-btn">次へ進む</button>
+<button><router-link to="/First">前へ戻る</router-link></button> 
+<button><router-link to="/Third">次に進む</router-link></button> 
     </div>
 
   </div>
@@ -43,14 +43,16 @@
 export default {
   data() {
     return {
-        show:false
+        show:false,
+        show2:false
     };
   },
   methods: {
       change:function() {
           this.show = true;
-      }
-      }
+      },
+      change2:function(){
+        this.show2 = true;
+      }},
 };
-
 </script>

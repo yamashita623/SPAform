@@ -1,24 +1,15 @@
 <template>
-    <section>
-        <span class="title">{{$store.state.counter}}</span>
-        <b-button @click="increment">add</b-button>
-        <b-button @click="decrement">sub</b-button>
-    </section>
+  <div class="Third">
+        <span>STEP3</span>
+        <h4>ご相談内容をご記入ください</h4>
+        <p>-ご相談内容-</p>
+        <textarea class="textarea" placeholder="10 lines of textarea" rows="10"></textarea>
+ <div class="button">
+<button><router-link to="/Second">前へ戻る</router-link></button> 
+<button>次に進む</button> <br>
+</div>
+  </div>
 </template>
+ <script>
 
-<script>
-export default {
-    methods:{
-        increment(){
-            this.$store.commit("increment");
-        },
-        decrement(){
-            this.$store.commit("decrement");
-        }
-    }
-}
 </script>
-
-<style scoped>
-
-</style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="First">
         <span>STEP1</span>
         <h4>お客様の情報を入力してください</h4>
     <label for="sex">-性別-</label><br>

@@ -25,6 +25,11 @@ export default new Router({
       path: '/First',
       name: 'First',
       component: () => import('./views/First.vue')
+    },
+    {
+      path: '/Third',
+      name: 'Third',
+      component: () => import('./views/Third.vue')
     }
   ]
 })
