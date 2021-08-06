@@ -8,21 +8,21 @@
 
       <form class="question-box">
         <p>現在、生命保険に加入されていますか？</p>
-        <input type="radio" name="question" value="ok" id="a" v-on:click="change"/>
+        <input type="radio" name="question" value="ok" id="a" v-on:click="openQuestion2nd"/>
         <label for="a">はい</label>
-        <input type="radio" name="question" value="no" id="b" v-on:click="change"/>
+        <input type="radio" name="question" value="no" id="b" v-on:click="openQuestion2nd"/>
         <label for="b">いいえ</label>
       </form>
 
-        <form class="question-box" v-if="show">
+        <form class="question-box" v-if="isOpen2ndQuestion">
           <p>現在、入院中ですか。または、最近3ヶ月以内に医師の診察・検査の結果、入院・手術をすすめられたことはありますか？</p>
-          <input type="radio" name="question" value="ok" id="c" v-on:click="change2" />
+          <input type="radio" name="question" value="ok" id="c" v-on:click="openQuestion3rd" />
           <label for="c">はい</label>
-          <input type="radio" name="question" value="no" id="d" v-on:click="change2" />
+          <input type="radio" name="question" value="no" id="d" v-on:click="openQuestion3rd" />
           <label for="d">いいえ</label>
         </form>
 
-      <form class="question-box" v-if="show2">
+      <form class="question-box" v-if="isOpen3rdQuestion">
         <p>過去５年以内に、病気やけがで、手術をうけたことまたは、継続して７日以上の入院をしたことがありますか？</p>
         <input type="radio" name="question" value="ok" id="e" />
         <label for="e">はい</label>
@@ -43,16 +43,16 @@
 export default {
   data() {
     return {
-        show:false,
-        show2:false
+        isOpen2ndQuestion:false,
+        isOpen3rdQuestion:false
     };
   },
   methods: {
-      change:function() {
-          this.show = true;
+      openQuestion2nd:function() {
+          this.isOpen2ndQuestion = true;
       },
-      change2:function(){
-        this.show2 = true;
+      openQuestion3rd:function(){
+        this.isOpen3rdQuestion = true;
       }},
 };
 </script>
