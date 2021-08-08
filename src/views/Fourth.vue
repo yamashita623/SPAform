@@ -2,10 +2,7 @@
   <div class="Fourth">
         <span>STEP3</span>
         <h4>以下の内容をご確認ください</h4>
-        <p>Name: {{ form.firstName }} {{ form.lastName }}</p>
-		    <p>Email: {{ form.Email }}</p>
-		    <p>Tel: {{ form.tel }}</p>
-		    <p>Birthday: {{ form.birthday }}</p>
+
 		
  <div class="button">
 <button><router-link to="/Third">前へ戻る</router-link></button> 
