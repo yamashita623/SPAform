@@ -6,7 +6,7 @@
         <textarea class="textarea" placeholder="10 lines of textarea" rows="10"></textarea>
  <div class="button">
 <button><router-link to="/Second">前へ戻る</router-link></button> 
-<button>次に進む</button> <br>
+<button><router-link to="/Fourth">次に進む</router-link></button> <br>
 </div>
   </div>
 </template>

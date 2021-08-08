@@ -2,9 +2,13 @@
   <div class="First">
         <span>STEP1</span>
         <h4>お客様の情報を入力してください</h4>
-    <label for="sex">-性別-</label><br>
-    <input type="radio" name="gender" value="male">男性
-    <input type="radio" name="gender" value="female">女性<br>
+    <label for="sex">-性別-</label>
+    <br>
+    <input type="radio" name="gender" value="male" v-model="sex">
+    <label for="男性">男性</label>
+    <br>
+    <input type="radio" name="gender" value="female" v-model="sex">
+    <label for="女性">女性</label>
     
     <label for="birthday">生年月日:
       <input
@@ -19,5 +23,19 @@
 </div>
 </template>
  <script>
+ export default {
+     computed: {
+       sex: {
+         get(){
+           return this.$store.state.sex;
+         },
+         set(val){
+           this.$store.dispatch('updateSex,val');
+           
+         }
+       }
+     }
+   }
+ 
 
 </script>
