@@ -3,15 +3,17 @@ import Vue from 'vue'
 Vue.use(Vuex)
 
 const state = {
-  sex:"",
+  gender:"",
   birthday:"",
   question:"",
+  question2nd:"",
+  question3rd:"",
   consultation:""
 }
 
 const mutations = {
-  setSex(state,val){
-    state.sex = val
+  setGender(state,val){
+    state.gender = val
   },
   setBirthday(state,val){
     state.birthday = val
@@ -19,35 +21,53 @@ const mutations = {
   setQuestion(state,val){
     state.question = val
   },
+  setQuestion2nd(state,val){
+    state.question2nd = val
+  },
+  setQuestion3rd(state,val){
+    state.question3rd = val
+  },
   setConsultation(state,val){
     state.consultation = val
   },
 }
 
 const actions = {
-  updateSex(commit,e){
-    commit('setSex',e.value)
+  setGender(context,val){
+    context.commit('setGender',val)
   },
-  updateBirthday(commit,e){
-    commit('setBirthday',e.value)
+  setBirthday(context,val){
+    context.commit('setBirthday',val)
   },
-  updateQuestion(commit,e){
-    commit('setQuestion',e.value)
+  setQuestion(context,val){
+    context.commit('setQuestion',val)
   },
-  updateConsultation(commit,e){
-    commit('setConsultation',e.value)
+  setQuestion2nd(context,val){
+    context.commit('setQuestion2nd',val)
+  },
+  setQuestion3rd(context,val){
+    context.commit('setQuestion3rd',val)
+  },
+  setConsultation(context,val){
+    context.commit('setConsultation',val)
   }
 }
 
 const getters = {
-  getSex(state){
-    return state.sex;
+  getGender(state){
+    return state.gender;
   },
   getBirthday(state){
     return state.birthday;
   },
   getQuestion(state){
     return state.question;
+  },
+  getQuestion2nd(state){
+    return state.question2nd;
+  },
+  getQuestion3rd(state){
+    return state.question3rd;
   },
   getConsultation(state){
     return state.consultation;

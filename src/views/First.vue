@@ -2,12 +2,12 @@
   <div class="First">
         <span>STEP1</span>
         <h4>お客様の情報を入力してください</h4>
-    <label for="sex">-性別-</label>
+    <label for="gender">-性別-</label>
     <br>
-    <input type="radio" name="gender" value="male" v-model="sex">
+    <input type="radio" name="gender" value="男性" v-model="gender">
     <label for="男性">男性</label>
     <br>
-    <input type="radio" name="gender" value="female" v-model="sex">
+    <input type="radio" name="gender" value="女性" v-model="gender">
     <label for="女性">女性</label>
     <br>
     
@@ -15,8 +15,8 @@
       <input
         type="date"
         id="birthday"
-        v-bind:value="birthday"
-        v-on:input="$emit('update:birthday', $event.target.value)">
+        v-model="birthday"
+      >
     </label><br>
 
 <button><router-link to="/Second">次に進む</router-link></button> 
@@ -26,14 +26,21 @@
  <script>
  export default {
      computed: {
-       sex:{
+       gender:{
          get(){
-           return this.$store.getters.getSex;
+           return this.$store.getters.getGender;
          },
          set(val){
-             this.$store.dispatch('updateSex',val);
-           }
-   }
+             this.$store.dispatch('setGender',val);
+           }},
+        birthday:{
+          get(){
+            return this.$store.getters.getBirthday;
+          },
+          set(val){
+            this.$store.dispatch('setBirthday',val);
+          }
+        }   
      }};
  
 
