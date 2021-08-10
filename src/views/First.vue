@@ -9,6 +9,7 @@
     <br>
     <input type="radio" name="gender" value="female" v-model="sex">
     <label for="女性">女性</label>
+    <br>
     
     <label for="birthday">生年月日:
       <input
@@ -25,17 +26,15 @@
  <script>
  export default {
      computed: {
-       sex: {
+       sex:{
          get(){
-           return this.$store.state.sex;
+           return this.$store.getters.getSex;
          },
          set(val){
-           this.$store.dispatch('updateSex,val');
-           
-         }
-       }
-     }
+             this.$store.dispatch('updateSex',val);
+           }
    }
+     }};
  
 
 </script>
