@@ -1,82 +1,82 @@
-import Vuex from 'vuex'
-import Vue from 'vue'
-Vue.use(Vuex)
+import Vuex from "vuex";
+import Vue from "vue";
+Vue.use(Vuex);
 
 const state = {
-  gender:"",
-  birthday:"",
-  question:"",
-  question2nd:"",
-  question3rd:"",
-  consultation:""
-}
+  gender: "",
+  birthday: "",
+  question: "",
+  question2nd: "",
+  question3rd: "",
+  consultation: "",
+};
 
 const mutations = {
-  setGender(state,val){
-    state.gender = val
+  setGender(state, val) {
+    state.gender = val;
   },
-  setBirthday(state,val){
-    state.birthday = val
+  setBirthday(state, val) {
+    state.birthday = val;
   },
-  setQuestion(state,val){
-    state.question = val
+  setQuestion(state, val) {
+    state.question = val;
   },
-  setQuestion2nd(state,val){
-    state.question2nd = val
+  setQuestion2nd(state, val) {
+    state.question2nd = val;
   },
-  setQuestion3rd(state,val){
-    state.question3rd = val
+  setQuestion3rd(state, val) {
+    state.question3rd = val;
   },
-  setConsultation(state,val){
-    state.consultation = val
+  setConsultation(state, val) {
+    state.consultation = val;
   },
-}
+};
 
 const actions = {
-  setGender(context,val){
-    context.commit('setGender',val)
+  setGender({ commit }, val) {
+    commit("setGender", val);
   },
-  setBirthday(context,val){
-    context.commit('setBirthday',val)
+  setBirthday({ commit }, val) {
+    commit("setBirthday", val);
   },
-  setQuestion(context,val){
-    context.commit('setQuestion',val)
+  setQuestion({ commit }, val) {
+    commit("setQuestion", val);
   },
-  setQuestion2nd(context,val){
-    context.commit('setQuestion2nd',val)
+  setQuestion2nd({ commit }, val) {
+    commit("setQuestion2nd", val);
   },
-  setQuestion3rd(context,val){
-    context.commit('setQuestion3rd',val)
+  setQuestion3rd({ commit }, val) {
+    commit("setQuestion3rd", val);
   },
-  setConsultation(context,val){
-    context.commit('setConsultation',val)
-  }
-}
+  setConsultation({ commit }, val) {
+    commit("setConsultation", val);
+  },
+};
 
 const getters = {
-  getGender(state){
+  getGender(state) {
     return state.gender;
   },
-  getBirthday(state){
+  getBirthday(state) {
     return state.birthday;
   },
-  getQuestion(state){
+  getQuestion(state) {
     return state.question;
   },
-  getQuestion2nd(state){
+  getQuestion2nd(state) {
     return state.question2nd;
   },
-  getQuestion3rd(state){
+  getQuestion3rd(state) {
     return state.question3rd;
   },
-  getConsultation(state){
+  getConsultation(state) {
     return state.consultation;
   },
-}
+};
 
 export default new Vuex.Store({
   state,
   getters,
   actions,
-  mutations
-})
+  mutations,
+});
