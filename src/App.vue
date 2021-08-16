@@ -1,16 +1,16 @@
 <template>
   <div id="app">
     <div>
-      <router-link to="/"></router-link> 
+      <router-link to="/"></router-link>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <style>
 @import "../node_modules/bulma/bulma.sass";
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
